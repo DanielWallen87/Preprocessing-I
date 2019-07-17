@@ -87,6 +87,22 @@ html, body {
 	nav a {
 		margin-right: 40px;
 		text-decoration: none;
+		color: #43B3E0
+	}
+
+	@media screen and (max-width: 1200px) {
+		flex-wrap: wrap;
+		flex-direction: column;
+		min-width: 100%;
+
+		h1, h2, nav {
+			display: flex;
+			justify-content: center;
+		}
+
+		nav a {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -124,6 +140,16 @@ html, body {
 		font-size: 1.5rem; 
 		font-family: @custom-font;
 	}
+
+	@media screen and (max-width: 1200px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		min-width: 100%;
+
+		#skills {
+			margin: 0 auto;
+		}
+	}
 }
 
 #bottom {
@@ -137,6 +163,12 @@ html, body {
 		font-family: @custom-font;
 	}
 
+	h2 {
+		font-size: 2rem;
+		font-family: @custom-font;
+		margin: 20px 0;
+	}
+
 	p {
 		font-size: 1.5rem;
 		font-family: @custom-font;
@@ -145,6 +177,7 @@ html, body {
 	#history {
 		width: 60%;
 		margin-right: 40px;
+		line-height: 1.5;
 	}
 
 	#featured {
@@ -158,5 +191,47 @@ html, body {
 		margin: 20px auto;
 		border-radius: 100%;
 	}
+
+	@media screen and (max-width: 1200px) {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		min-width: 100%;
+		margin-top: 40px;
+		margin-bottom: 40px;
+
+		#history {
+			margin: 0 auto;
+		}
+
+		#featured {
+			margin: 0 auto;
+		}
+	}
 	
+}
+
+#button {
+	margin: 0 auto;
+	margin-bottom: 40px;
+	cursor: pointer;
+	font-size: 3rem;
+	font-family: @custom-font;
+	background: #43B3E0;
+	text-align: center;
+	color: white;
+	border: 1px solid black;
+	width: 1300px;
+	line-height: 2;
+
+	a {
+		text-decoration: none;
+		color: white;
+		padding: 20px 0;
+	}
+
+	@media screen and (max-width: 1200px) {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 100%;
+	}
 }

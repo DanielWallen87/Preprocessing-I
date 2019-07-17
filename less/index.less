@@ -55,14 +55,24 @@ table {
 
 @custom-font: 'Quicksand', sans-serif;
 
+.flex-styles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.mobile-styles {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
 html, body {
 	font-size: 62.5%;
 	height: 100%;
 }
 
 #top {
-	display: flex;
-	justify-content: space-between;
+	.flex-styles();
 
 	h1 {
 		font-size: 3rem;
@@ -107,9 +117,7 @@ html, body {
 }
 
 #middle {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	.flex-styles();
 
 	#skills {
 		width: 60%;
@@ -150,13 +158,17 @@ html, body {
 			margin: 0 auto;
 		}
 	}
+
+	@media screen and (max-width: 500px) {
+		h1 {
+			.mobile-styles();
+		}
+	}
 }
 
 #bottom {
-	display: flex;
-	flex-wrap: wrap;
+	.flex-styles();
 	flex-direction: row-reverse;
-	justify-content: space-between;
 
 	h1 {
 		font-size: 3rem;
@@ -205,6 +217,12 @@ html, body {
 
 		#featured {
 			margin: 0 auto;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		h1 {
+			.mobile-styles();
 		}
 	}
 	

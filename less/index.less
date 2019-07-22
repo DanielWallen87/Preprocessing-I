@@ -128,12 +128,14 @@ a {
 			display: flex;
 		}
 
-		h2 {
-			font-size: 1rem;
-		}
-
 		nav a {
 			margin: 0 auto;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		h2 {
+			font-size: 0.8rem;
 		}
 	}
 }
@@ -284,6 +286,6 @@ a {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		max-width: 100%;
+		min-width: 100%;
 	}
 } 
